@@ -1,5 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, HttpResponseRedirect, HttpResponse, get_object_or_404
+from django.urls import reverse
+from django.contrib import messages, auth
+from django.template.context_processors import csrf
+from django.contrib.auth.decorators import login_required
 
+# from django.shortcuts import render, redirect, HttpResponseRedirect
+# from django.contrib import messages, auth
+from .forms import UserRegistrationForm, UserLoginForm
+# from django.template.context_processors import csrf
+# from django.contrib.auth.decorators import login_required
+
+# import json
+# # from .models import UserProfile
+# from django.contrib.auth.models import User
+# from django.http import HttpResponse
+# from django.views.decorators.csrf import csrf_exempt
+# from django.conf import settings
 # Create your views here.
 def login(request):
     if request.method == 'POST':
@@ -16,7 +32,7 @@ def login(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('login'))
+                    return redirect(reverse('profile'))
             else:
                 form.add_error(None, "Your username or password was not recognised")
     else:
@@ -31,6 +47,9 @@ def logout(request):
     messages.success(request, 'You have successfully logged out')
     return redirect(reverse('index'))
 
+@login_required(login_url='/accounts/login')
+def profile(request):
+    return render(request, 'profile.html')
 
 def register(request):
     if request.method == 'POST':
