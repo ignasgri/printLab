@@ -3,6 +3,7 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+<div class="container">
 <h2>You are logged in as {{ user.first_name }} </h2>
 <h1>This is yours profile</h1>
 <li class="righticons"><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
@@ -15,6 +16,7 @@
             {{ message }}
         {% endfor %}
     </div>
+</div>
 </div>
 {% endif %}
 

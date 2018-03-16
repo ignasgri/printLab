@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% load static from staticfiles%}
 
+
 {% block content %}
+<div class="container text-center">
+<img class="logo_image" src="{% static "logo.png" %}" alt="My image"/>
+</div>
+<div class="container text-center">
 <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
           <i class="fa fa-user fa-2x" style="color:white" aria-hidden="true"></i>
@@ -19,4 +24,5 @@
               <input type="email" class="textfield reset-field" name="email" name="csrfmiddlewaretoken">
               <button type="submit" name="password_reset" class="btn btn-warning buttonwr"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Reset confirmation</button>
     </form>
+</div>
     {%endblock%}
