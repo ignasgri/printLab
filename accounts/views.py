@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect, HttpResponse, get_object_or_404
+from accounts.forms import UserRegistrationForm, UserLoginForm, FullUserDetailsForm
 from django.urls import reverse
 from django.contrib import messages, auth
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+from .models import UserProfile
 
 # from django.shortcuts import render, redirect, HttpResponseRedirect
 # from django.contrib import messages, auth
@@ -17,6 +19,21 @@ from .forms import UserRegistrationForm, UserLoginForm
 # from django.views.decorators.csrf import csrf_exempt
 # from django.conf import settings
 # Create your views here.
+@login_required(login_url='/accounts/login')
+def profile(request):
+    adults = UserProfile.objects.filter(user=request.user)
+    return render(request, 'profile.html', {'adults': adults})
+
+def update_profile(request):
+    form=FullUserDetailsForm(request.POST, request.FILES)
+    if form.is_valid():
+        request.user.first_name=form.cleaned_data['first_name']
+        request.user.save()
+        return redirect(reverse('profile'))
+    else:
+        return HttpResponse("Error")
+
+
 def login(request):
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
@@ -47,9 +64,9 @@ def logout(request):
     messages.success(request, 'You have successfully logged out')
     return redirect(reverse('index'))
 
-@login_required(login_url='/accounts/login')
-def profile(request):
-    return render(request, 'profile.html')
+# @login_required(login_url='/accounts/login')
+# def profile(request):
+#     return render(request, 'profile.html')
 
 def register(request):
     if request.method == 'POST':
@@ -74,4 +91,4 @@ def register(request):
     args = {'form': form}
     args.update(csrf(request))
 
-    return render(request, 'profile.html', args)
+    return render(request, 'register.html', args)

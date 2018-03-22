@@ -17,3 +17,7 @@ urlpatterns = [
     
     
 ]
+# changes title in admin panel
+admin.site.site_header = "printLab Administration"
+admin.site.site_title = "printLab"
+admin.site.index_title = 'Welcome to "printLab" dashboard'

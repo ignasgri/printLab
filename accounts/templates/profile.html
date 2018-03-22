@@ -3,6 +3,27 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 userForm">
+        <table class="personalInfoProfile">
+            <h1>Personail details</h1>
+                <form class="" action="" method="post">
+                    {% csrf_token %}
+                    <tr>
+                        <td>First name*:</td> 
+                        <td><input type="text" value="{{ user.first_name }}" name="first_name"></td>
+                    </tr>
+                    
+                    <br>
+                        <td></td>
+                        <td><button class="btn buttonUpdate" type="submit">Update</button>
+                        <button type="button" class="btn buttonAdd" data-toggle="modal" data-target="#kiddy">Add kid</button></td>
+                    </tr>
+                </form>
+                
+        </table>
+    </div>
+
 <div class="container">
 <h2>You are logged in as {{ user.first_name }} </h2>
 <h1>This is yours profile</h1>

@@ -7,6 +7,11 @@ from django.contrib.auth.models import User
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+class FullUserDetailsForm(forms.Form):
+    first_name = forms.CharField(max_length=None, required=False)
+    last_name = forms.CharField(max_length=None, required=False)
+    email = forms.CharField(max_length=None, required=False)
     
 class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)

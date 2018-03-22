@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static from staticfiles%}
+
+
+{% block content %}
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+
+<i class="fa fa-user fa-2x" style="color:white" aria-hidden="true"></i>
+<input type="text" class="textfield" placeholder="User name" name="username" >
+
+<i class="fa fa-envelope-o fa-2x" style="color:white" aria-hidden="true" ></i>
+<input type="email" class="textfield" placeholder="Email" name="email">
+
+<i class="fa fa-lock fa-2x" style="color:white" aria-hidden="true" ></i>
+<input type="password" class="textfield" placeholder="Your password" name="password1">
+
+
+<i class="fa fa-lock fa-2x" style="color:white" aria-hidden="true" ></i>
+<i class="fa fa-repeat passreapeat" aria-hidden="true"></i>
+
+<input type="password" class="textfield" placeholder="Reapeat your password" name="password2">
+
+<button type="submit" class="btn btn-success buttonreg" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Register</button>
+<!--<button type="submit" class="btn btn-danger buttonrs"><i class="fa fa-link" aria-hidden="true"></i> Full Registration Form</button>-->
+</form>
+{% endblock %}
