@@ -8,7 +8,7 @@ from .models import UserProfile
 
 # from django.shortcuts import render, redirect, HttpResponseRedirect
 # from django.contrib import messages, auth
-from .forms import UserRegistrationForm, UserLoginForm
+# from .forms import UserRegistrationForm, UserLoginForm
 # from django.template.context_processors import csrf
 # from django.contrib.auth.decorators import login_required
 
@@ -21,8 +21,8 @@ from .forms import UserRegistrationForm, UserLoginForm
 # Create your views here.
 @login_required(login_url='/accounts/login')
 def profile(request):
-    adults = UserProfile.objects.filter(user=request.user)
-    return render(request, 'profile.html', {'adults': adults})
+    # adults = UserProfile.objects.filter(user=request.user)
+    return render(request, 'profile.html')
 
 def update_profile(request):
     form=FullUserDetailsForm(request.POST, request.FILES)
@@ -51,7 +51,7 @@ def login(request):
                 else:
                     return redirect(reverse('profile'))
             else:
-                form.add_error(None, "Your username or password was not recognised")
+                form.add_error(None, "Your username/email or password was not recognised")
     else:
         form = UserLoginForm()
 
