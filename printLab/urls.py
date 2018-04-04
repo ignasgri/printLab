@@ -4,6 +4,7 @@ from django.urls import path
 from home.views import get_index
 from accounts import urls as accounts_urls
 from accounts import reset_urls as reset_urls
+from dashboard import urls as dashboard_urls
 from .settings import MEDIA_ROOT
 from django.views import static
 
@@ -12,6 +13,7 @@ urlpatterns = [
     url(r'^$', get_index, name='index'),
     url(r'accounts/', include(accounts_urls)),
     url(r'user/', include(reset_urls)),
+    url(r'^dashboard/', include(dashboard_urls)),
     # path('admin/', admin.site.urls),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     
