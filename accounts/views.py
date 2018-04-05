@@ -33,7 +33,6 @@ def update_profile(request):
     else:
         return HttpResponse("Error")
 
-
 def login(request):
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
@@ -49,7 +48,7 @@ def login(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('profile'))
+                    return redirect(reverse('main_dashboard'))
             else:
                 form.add_error(None, "Your username/email or password was not recognised")
     else:

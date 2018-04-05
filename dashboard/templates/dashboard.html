@@ -1,25 +1,6 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
-This is yourt dashboard
-{% block content %}
 
-        {% if next %}
-            <form role="form" method="post" action="{% url 'login' %}?next={{ next }}">
-        {% else %}
-            <form role="form" method="post" action="{% url 'login' %}">
-        {% endif %}
-        <div class="kidsFormCenter">
-            <legend>Login</legend>
-        {% csrf_token %}
-        <div class="inlineBlockLogin">
-            {{ form | as_bootstrap }}
-            </div>
-            <p><a href="{}">Forgot my password?</a></p>
-                <div class="form-group">
-                    <button type="submit" class="btn buttonLogin">Login</button>
-                    <p><a href="{% url 'register' %}">Register</a></p>
-                    
-                </div>
-            </form>
-            </div>
+{% block content %}
+This is yourt dashboard
 {% endblock %}
