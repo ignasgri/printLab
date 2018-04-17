@@ -1,6 +1,65 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+{% load static from staticfiles%}
 
 {% block content %}
-This is yourt dashboard
+<div class="container text-center">
+    <div class="row">
+        <div class="col-sm">
+        <img class="logo_image" src="{% static "one.png" %}" alt="My image"/>
+        <div class="text_format">
+        <p>A4 signs</p>
+        <p>label per page: 210 x 297mm</p> 
+        </div>
+        </div>
+            <div class="col-sm">
+            <img class="logo_image" src="{% static "two.png" %}" alt="My image"/>
+            <div class="text_format">
+            <p>1/2 signs</p>
+            <p>labels per page: 199.6 x 143.5mm</p> 
+            </div>
+        </div>
+                <div class="col-sm">
+                <img class="logo_image" src="{% static "three.png" %}" alt="My image"/>
+                <div class="text_format">
+                <p>1/3 signs</p>
+                <p>4 labels per page: 105 x 148mm need to fix it!</p>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <img class="logo_image" src="{% static "eight.png" %}" alt="My image"/>
+            <div class="text_format">
+            <p>1/8 signs</p>
+            <p>Freash food counter labels</p>
+        </div></div>
+            <div class="col-sm">
+            <img class="logo_image" src="{% static "sixteen.png" %}" alt="My image"/>
+            <div class="text_format">
+                <p>1/16</p>
+                <p>Wine labels</p>
+            </div></div>
+                <div class="col-sm">
+                <img class="logo_image" src="{% static "twentyfour.png" %}" alt="My image"/>
+                <div class="text_format">
+                    <p>1/24</p>
+                    <p>Price tags</p>
+                </div></div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+                <div class="text_format">
+            <p>One of three columns</p>
+        </div></div>
+            <div class="col-sm">
+                    <div class="text_format">
+                <p>One of three columns</p>
+            </div></div>
+                <div class="col-sm">
+                        <div class="text_format">
+                    <p>One of three columns</p>
+                </div></div>
+    </div>
+</div>
 {% endblock %}
