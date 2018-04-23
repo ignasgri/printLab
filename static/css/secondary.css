@@ -11,3 +11,38 @@
 .text_format > p{
     margin: 0px;
 }
+.a4_image{
+    max-width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+#result{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 25px;
+}
+#result1{
+    color: white;
+    font-size: 120px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0.9;
+    width: 500px;
+    margin: auto;
+}
+#result2{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 25px;
+}
+.result1_display{
+    height: 80%;
+}
+.border{
+    border: 1px solid #2799b6;
+    text-align: center;
+    padding: 8px;
+    margin: auto;
+}
