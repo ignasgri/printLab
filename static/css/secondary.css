@@ -17,30 +17,29 @@
     position: absolute;
     z-index: -1;
 }
-#result{
+#option{
+    color: white;
+    font-size: calc(6 * 100%);
+    font-weight: bolder;
+    text-align: center;
+    line-height: 1;
+    width: 500px;
+    margin: auto;
+}
+#a4_description_result{
     color: white;
     font-size: 30px;
     text-align: center;
     margin-left: 25px;
     padding: 0 50px;
     padding-top: 20px;
-    width: 550px;
-    margin: 0 auto;
+    /* width: 80%;
+    margin: 0 auto; */
 }
-#result1{
+#a4_weight_result{
     color: white;
-    font-size: 120px;
-    font-weight: bolder;
-    text-align: center;
-    line-height: 0.9;
-    width: 500px;
-    margin: auto;
-}
-#result2{
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    margin-left: 25px;
+    font-size: 30px;
+    padding-top: 20px;
 }
 .result1_display{
     height: 80%;

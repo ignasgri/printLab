@@ -1,59 +1,50 @@
-$(document).ready(function () {
-    $('#title').keyup(function(e){
-        var keyed = $(this).val().replace(/[]/g, '');
-        if(keyed == '<')
-        {
-            $('#title').keyup(function(e){
-                var keyed = $(this).val().replace(/[]/g,'');
-                $('#result"').html('<' + keyed);
-            });
-        }
-        else
-        $("#result").html(keyed);
-     });
-    });
-
-// $(document).ready(function () {
-//     $('#title1').keyup(function(e){
-//         var keyed = $(this).val().replace(/[]/g, '');
-//         if(keyed == '<')
-//         {
-//             $('#title1').keyup(function(e){
-//                 var keyed = $(this).val().replace(/[]/g,'');
-//                 $('#result1"').html('<' + keyed);
-//             });
-//         }
-//         else
-//         $("#result1").html(keyed);
-//      });
-//     });
-
-
-var selectElem = document.getElementById('title1')
-var pElem = document.getElementById('result1')
+var selectElem = document.getElementById('options')
+var pElem = document.getElementById('option')
 
 // When a new <option> is selected
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
   // Add that data to the <p>
-  pElem.innerHTML = $("#title1").val();
+  pElem.innerHTML = $("#options").val();
 })
 
-
 $(document).ready(function () {
-    $('#title3').keyup(function(e){
+    $('#a4_description').keyup(function(e){
         var keyed = $(this).val().replace(/[]/g, '');
         if(keyed == '<')
         {
-            $('#title3').keyup(function(e){
+            $('#a4_description').keyup(function(e){
                 var keyed = $(this).val().replace(/[]/g,'');
-                $('#result3"').html('<' + keyed);
+                $('#a4_description_result"').html('<' + keyed);
             });
         }
         else
-        $("#result3").html(keyed);
-        });
+        $("#a4_description_result").html(keyed);
+     });
     });
+
+
+function insertText(elemID, text)
+{
+    var elem = document.getElementById('a4_weight_result');
+    elem.innerHTML += $("#a4_weight").val();
+}
+
+// 
+// $(document).ready(function () {
+//     $('#a4_weight').keyup(function(e){
+//         var keyed = $(this).val().replace(/[]/g, '');
+//         if(keyed == '<')
+//         {
+//             $('#a4_weight').keyup(function(e){
+//                 var keyed = $(this).val().replace(/[]/g,'');
+//                 $('#a4_weight_result"').html('<' + keyed);
+//             });
+//         }
+//         else
+//         $("#a4_weight_result").html(keyed);
+//         });
+//     });
 
 $(document).ready(function () {
     $('#title4').keyup(function(e){
