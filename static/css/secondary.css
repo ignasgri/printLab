@@ -41,6 +41,38 @@
     font-size: 30px;
     padding-top: 20px;
 }
+#result4, #result8 {
+    color: white;
+    font-size: 30px;
+}
+#result5, #result6{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+#result7{
+    color: white;
+    font-size: 80px;
+    text-align: right;
+}
+.strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+  
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+  }
 .result1_display{
     height: 80%;
 }
