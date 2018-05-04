@@ -41,7 +41,7 @@
     font-size: 30px;
     padding-top: 20px;
 }
-#result4, #result8 {
+#result4 {
     color: white;
     font-size: 30px;
 }
@@ -49,11 +49,31 @@
     color: white;
     font-size: 50px;
     text-align: center;
+    top: -25px;
+    position: relative;
 }
 #result7{
     color: white;
     font-size: 80px;
-    text-align: right;
+    margin-left: 300px;
+    top: -50px;
+    position: relative;
+    height: 60px;
+}
+.valid_info{
+
+    position: relative;
+
+    margin-left: 55px;
+}
+.country_text{
+    font-size: 8px;
+}
+.inline{
+    display: inline;
+}
+.cc{
+    display: inline;
 }
 .strikethrough {
     position: relative;
@@ -66,12 +86,14 @@
     right: 0;
     border-top: 1px solid;
     border-color: inherit;
+    width: 180px;
+    margin: auto;
   
-    -webkit-transform:rotate(-5deg);
-    -moz-transform:rotate(-5deg);
-    -ms-transform:rotate(-5deg);
-    -o-transform:rotate(-5deg);
-    transform:rotate(-5deg);
+    -webkit-transform:rotate(-15deg);
+    -moz-transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    transform:rotate(-15deg);
   }
 .result1_display{
     height: 80%;

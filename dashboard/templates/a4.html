@@ -18,45 +18,46 @@
                 <div id="a4_weight_result"><br/></div>
               </div>
         </div>
-                <div id="result4"><br/></div>
+       
                   <div class="row">
-                      <div class="col-6">
+                      <div class="col-6 text-center">
                         <p>Was</p>
                     <div class="strikethrough" id="result5"><br/></div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 text-center">
                     <p>Save</p>
                     <div id="result6"><br/></div>
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-10">
+                      <div class="col-10 text-center cc">
                           <p>Now</p>
-                <div id="result7"><br/></div>
-                      </div></div>
-                <div id="result8">
-                    </div>
+                          <div id="result7"></div>
+                          </div>
+                          </div>
+
+                          <div class="row valid_info">
+                              <div class="col-4 text-center country_text">
+                                <p class="inline">Valid from:</p>
+                                  <div class="inline" id="result8"><p id="date"></p></div>
+                                        </div>
+                                        <div class="col-4 country_text">
+                                            <p class="inline">Valid to:</p>
+                                  <div id="result9">
+                                      </div>
+                                        </div>
+                              <div class="col-4 country_text">
+                                <p class="inline">Country of Origin:</p>
+                                  <div class="inline" id="countries_result"><span>Ireland</span></div>
+                                  </div>
+                                  
+                </div>
                 </div>
           
           <div class="col-5">
               <div class="border">
                 <form>
-                        <!-- <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Select Special Offer
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown<MenuButton">
-                                  <a class="dropdown-item" id="title1">Save 10%</a>
-                                  <a class="dropdown-item" id="title1">Save 33%</a>
-                                  <a class="dropdown-item" id="title1">Half Price</a>
-                                  <a class="dropdown-item" id="title1">Better Then Half Price</a>
-                                  <a class="dropdown-item" id="title1">Reduced to Clear</a>
-                                  <a class="dropdown-item" id="title1">Buy One get One Free</a>
-                                  <a class="dropdown-item" id="title1">Buy One get Second Half Price</a>
-                                </div>
-                              </div><br> -->
 
-                              
                               <select id="options">
                                 <option selected>Select</option>
                                 <option>Special Offer</option>
@@ -77,15 +78,26 @@
 
                           <input type="button" value="Insert some text" onclick="insertText('txt1', 'Hello');">
                         </form>
-                        <p>Country of Origin</p><input type="text" id="title4" name="title"/><br/>
-                        <p>Was</p><input type="text" id="title5" name="title"/><br/>
-                        <p>Save</p><input type="text" id="title6" name="title"/><br/>
-                        <p>New Price</p><input type="text" id="title7" name="title"/><br/>
-                        <p>Valid from</p><input type="text" id="title8" name="title"/><p>Valid to</p><br/>
+                        
+                        <p>Was</p><input type="text" id="title5" name="title"/ value="€"><br/>
+                        <p>Save</p><input type="text" id="title6" name="title"/ value="€"><br/>
+                        <p>New Price</p><input type="text" id="title7" name="title" value="€"/><br/>
+                        <p>Valid from</p><input type="date" id="myDate" name="title"/><br/>
+                        <button onclick="myFunction()">Try it</button>
+                        
+                        <p>Valid to</p><input type="text" id="title9" name="title"/><br/>
+                        <p>Country of Origin</p><select id="countries_options">
+                            <option value="Ireland" selected="Ireland">Ireland</option>
+                            <option>Scotland</option>
+                            <option>United Kingdom</option>
+                            <option>Danmark</option>
+                            <option>Germany</option>
+                          </select><br/>
                         </form>
                   
           </div>
         
+        </div>
         </div>
         </div>
 
