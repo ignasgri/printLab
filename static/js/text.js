@@ -1,8 +1,72 @@
+//text resize
 fitty('#option',{
     minSize: 80,
     maxSize: 100,
     multiLine: true,
 });
+//radio buttons 
+var radioE = document.getElementById('radio')
+var pE = document.getElementById('radio_result')
+
+// When a new <option> is selected
+radioE.addEventListener('change', function() {
+  var index = radioE.selectedIndex;
+  // Add that data to the <p>
+  pE.innerHTML = $("#radio").val();
+})
+
+var radioE = document.getElementById('radio1')
+var pE = document.getElementById('radio_result')
+
+// When a new <option> is selected
+radioE.addEventListener('change', function() {
+  var index = radioE.selectedIndex;
+  // Add that data to the <p>
+  pE.innerHTML = $("#radio1").val();
+})
+
+var radioE2 = document.getElementById('radio2')
+var pE2 = document.getElementById('radio_result2')
+
+// When a new <option> is selected
+radioE2.addEventListener('change', function() {
+  var index = radioE2.selectedIndex;
+  // Add that data to the <p>
+  pE2.innerHTML = $("#radio2").val();
+})
+
+var radioE2 = document.getElementById('radio3')
+var pE2 = document.getElementById('radio_result2')
+
+// When a new <option> is selected
+radioE2.addEventListener('change', function() {
+  var index = radioE2.selectedIndex;
+  // Add that data to the <p>
+  pE2.innerHTML = $("#radio3").val();
+})
+
+var radioE3 = document.getElementById('radio4')
+var pE3 = document.getElementById('radio_result3')
+
+// When a new <option> is selected
+radioE3.addEventListener('change', function() {
+  var index = radioE3.selectedIndex;
+  // Add that data to the <p>
+  pE3.innerHTML = $("#radio4").val();
+})
+
+var radioE3 = document.getElementById('radio5')
+var pE3 = document.getElementById('radio_result3')
+
+// When a new <option> is selected
+radioE3.addEventListener('change', function() {
+  var index = radioE3.selectedIndex;
+  // Add that data to the <p>
+  pE3.innerHTML = $("#radio5").val();
+})
+
+
+//side menu options
 var selectElem = document.getElementById('options')
 var pElem = document.getElementById('option')
 

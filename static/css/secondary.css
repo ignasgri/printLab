@@ -28,6 +28,7 @@
     position: relative;
     white-space: pre-wrap!important;
     padding: 0 60px;
+    padding-left: 80px;
 }
 #a4_description_result{
     color: white;
@@ -53,15 +54,17 @@
 }
 #result5, #result6{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     top: -25px;
     position: relative;
+    width: 280px;
+    height: 80px;
 }
 #result7{
     color: white;
     font-size: 80px;
-    margin-left: 300px;
+    margin-left: 280px;
     top: -50px;
     position: relative;
     height: 60px;
@@ -93,7 +96,7 @@
     right: 0;
     border-top: 1px solid;
     border-color: inherit;
-    width: 180px;
+    width: 150px;
     margin: auto;
   
     -webkit-transform:rotate(-15deg);
@@ -116,4 +119,18 @@
 }
 .tag{
     font-weight: bold;
+}
+.grouped_inline{
+    display: flex;
+}
+#radio_result{
+    margin-left: -60px;
+    margin-top: 5px;
+}
+#radio_result2{
+    margin-left: -60px;
+    margin-top: 5px;
+}
+#radio_result3{
+    margin-top: 25px;
 }

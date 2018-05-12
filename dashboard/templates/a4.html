@@ -22,17 +22,20 @@
                   <div class="row">
                       <div class="col-6 text-center">
                         <p class="tag">Was</p>
-                    <div class="strikethrough" id="result5"><br/></div>
+                        <div class="grouped_inline">
+                    <div class="strikethrough" id="result5"></div><div id="radio_result"></div></div>
                   </div>
                   <div class="col-6 text-center">
                     <p class="tag">Save</p>
-                    <div id="result6"><br/></div>
+                    <div class="grouped_inline">
+                    <div id="result6"></div><div id="radio_result2"></div></div>
                       </div>
                   </div>
                   <div class="row">
                       <div class="col-10 text-center cc">
                           <p class="tag">Now</p>
-                          <div id="result7"></div>
+                          <div class="grouped_inline">
+                          <div id="result7"></div><div id="radio_result3"></div></div>
                           </div>
                           </div>
 
@@ -81,18 +84,18 @@
                         
                         <p>Was</p><input type="text" id="title5" name="title"/ value="€"><br/>
                         <form>
-                        <input type="radio" name="pick" value="Bike">Each
-                        <input type="radio" name="pick" value="Bike">Per Kg
+                        <input id="radio" selected="each" type="radio" name="pick" value="each">Each
+                        <input id="radio1" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
                         </form>
                         <p>Save</p><input type="text" id="title6" name="title"/ value="€"><br/>
                         <form>
-                        <input type="radio" name="pick" value="Bike">Each
-                        <input type="radio" name="pick" value="Bike">Per Kg
+                        <input id="radio2" selected="each" type="radio" name="pick" value="each">Each
+                        <input id="radio3" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
                         </form>
                         <p>New Price</p><input type="text" id="title7" name="title" value="€"/><br/>
                         <form>
-                        <input type="radio" name="pick" value="Bike">Each
-                        <input type="radio" name="pick" value="Bike">Per Kg
+                        <input id="radio4" selected="each" type="radio" name="pick" value="each">Each
+                        <input id="radio5" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
                       </form>
                         <p>Valid from</p><input type="date" id="myDate" name="title"/><br/>
                         <button onclick="myFunction()">Try it</button>
