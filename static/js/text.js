@@ -109,33 +109,41 @@ $(document).ready(function () {
         $("#a4_description_result").html(keyed);
      });
     });
-// fitty('#a4_description_result',{
-//     minSize: 16,
-//     maxSize: 256,
-//     multiLine: true,
-//     observeMutations: true
+
+
+// function insertText(elemID, text)
+// {
+//     var elem = document.getElementById('a4_weight_result');
+//     elem.innerHTML += $("#a4_weight").val();
+// }
+
+// $(document).ready(function () {
+//     $('#a4_weight').keyup(function(e){
+//         var keyed = $(this).val().replace(/[]/g, '');
+//         if(keyed == '<')
+//         {
+//             $('#a4_weight').keyup(function(e){
+//                 var keyed = $(this).val().replace(/[]/g,'');
+//                 $('#a4_weight_result').html('<' + keyed);
+//             });
+//         }
+//         else
+//         $("#a4_weight_result").html(keyed);
+//         });
 //     });
 
-function insertText(elemID, text)
+calculate = function()
 {
-    var elem = document.getElementById('a4_weight_result');
-    elem.innerHTML += $("#a4_weight").val();
-}
+    var resources = document.getElementById('a4_description').value;
+    var minutes = document.getElementById('a4_weight').value; 
+    document.getElementById('a4_description_result').innerHTML = document.getElementById('a4_description').value + " " + document.getElementById('a4_weight').value;
+     
+   }
 
-$(document).ready(function () {
-    $('#title4').keyup(function(e){
-        var keyed = $(this).val().replace(/[]/g, '');
-        if(keyed == '<')
-        {
-            $('#title4').keyup(function(e){
-                var keyed = $(this).val().replace(/[]/g,'');
-                $('#result4').html('<' + keyed);
-            });
-        }
-        else
-        $("#result4").html(keyed);
-        });
-    });
+
+
+
+
 
 $(document).ready(function () {
     $('#title5').keyup(function(e){
@@ -195,4 +203,14 @@ function myFunction() {
     document.getElementById("result8").innerHTML = x;
 }
 
+var currentDate = new Date()
+var day = currentDate.getDate()
+var month = currentDate.getMonth() + 1
+var year = currentDate.getFullYear()
+document.getElementById("result9").innerHTML =(day + "-" + month + "-" + year)
 
+
+function myFunction2() {
+    var x = document.getElementById("myDate2").value;
+    document.getElementById("result9").innerHTML = x;
+}

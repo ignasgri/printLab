@@ -11,12 +11,11 @@
                 <div id="option"></div>
         </div>
         <div class="row descr">
-            <div class="col-10">
-                <div id="a4_description_result"></div>
+            <div class="col-12">
+                <div class="grouped_inline">
+                <div id="a4_description_result" name="total_amt" ></div><span id="a4_weight_result"> </span></div>
                 </div>
-                <div class="col-2">
-                <div id="a4_weight_result"><br/></div>
-              </div>
+                
         </div>
        
                   <div class="row">
@@ -46,8 +45,8 @@
                                         </div>
                                         <div class="col-4 country_text">
                                             <p class="inline">Valid to:</p>
-                                  <div id="result9">
-                                      </div>
+                                            <div class="inline" id="result9"><p id="date2"></p></div>
+                                 
                                         </div>
                               <div class="col-4 country_text">
                                 <p class="inline">Country of Origin:</p>
@@ -74,8 +73,8 @@
                               </select>
                            
                            <br>
-                        <p>Description</p><input type="text" id="a4_description" name="title"/><br/>
-                        <p>Weight</p><input type="text" id="a4_weight" name="title"/><br/>
+                        <p>Description</p><textarea type="text" id="a4_description" name="title" cols="30" rows="5"></textarea>
+                        <p>Weight</p><input type="text" id="a4_weight" name="title" onblur="calculate()" /><br/>
 
                         <form>
 
@@ -100,7 +99,8 @@
                         <p>Valid from</p><input type="date" id="myDate" name="title"/><br/>
                         <button onclick="myFunction()">Try it</button>
                         
-                        <p>Valid to</p><input type="text" id="title9" name="title"/><br/>
+                        <p>Valid to</p><input type="date" id="myDate2" name="title"/><br/>
+                        <button onclick="myFunction2()">Try it</button>
                         <p>Country of Origin</p><select id="countries_options">
                             <option value="Ireland" selected="Ireland">Ireland</option>
                             <option>Scotland</option>
