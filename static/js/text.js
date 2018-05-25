@@ -1,8 +1,17 @@
 //text resize
-fitty('#option',{
-    minSize: 80,
-    maxSize: 100,
-    multiLine: true,
+// fitty('#option',{
+//     minSize: 80,
+//     maxSize: 150,
+//     multiLine: true,
+// });
+
+fitty('#a4_description_result',{
+    minSize: 20,
+    maxSize: 45,
+    // multiLine: true,
+    // observeWindow: true,
+    // observeMutations: false
+    
 });
 //radio buttons 
 var radioE = document.getElementById('radio')
@@ -89,12 +98,7 @@ selectElement.addEventListener('change', function() {
 
 })
 
-fitty('#a4_description_result',{
-    minSize: 30,
-    maxSize: 45,
-    multiLine: true,
-    // observeMutations: true,
-});
+
 $(document).ready(function () {
     $('#a4_description').keyup(function(e){
         var keyed = $(this).val().replace(/[]/g, '');

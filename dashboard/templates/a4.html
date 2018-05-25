@@ -8,7 +8,7 @@
           <div class="col-7">
                 <img class="a4_image" src="{% static "a4sample.png" %}" alt="My image"/>
                 <div class="row result1_display">
-                <div id="option"></div>
+                <div id="option"><span>Special Offer</span></div>
         </div>
         <div class="row descr">
             <div class="col-12">
@@ -18,7 +18,7 @@
                 
         </div>
        
-                  <div class="row">
+                  <div class="row was_save">
                       <div class="col-6 text-center">
                         <p class="tag">Was</p>
                         <div class="grouped_inline">
@@ -31,7 +31,7 @@
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-10 text-center cc">
+                      <div class="col-10 text-center cc height140">
                           <p class="tag">Now</p>
                           <div class="grouped_inline">
                           <div id="result7"></div><div id="radio_result3"></div></div>
@@ -39,7 +39,7 @@
                           </div>
 
                           <div class="row valid_info">
-                              <div class="col-4 text-center country_text">
+                              <div class="offset-sm-1 col-2 text-center country_text">
                                 <p class="inline">Valid from:</p>
                                   <div class="inline" id="result8"><p id="date"></p></div>
                                         </div>
@@ -48,7 +48,7 @@
                                             <div class="inline" id="result9"><p id="date2"></p></div>
                                  
                                         </div>
-                              <div class="col-4 country_text">
+                              <div class="offset-sm-1 col-4 country_text">
                                 <p class="inline">Country of Origin:</p>
                                   <div class="inline" id="countries_result"><span>Ireland</span></div>
                                   </div>
@@ -58,10 +58,11 @@
           
           <div class="col-5">
               <div class="border">
+                <p class="margin-bottom4">Select special offer</p>
                 <form>
 
                               <select id="options">
-                                <option selected>Select</option>
+                                
                                 <option>Special Offer</option>
                                 <option>Save 33%</option>
                                 <option>Half Price</option>
@@ -73,41 +74,54 @@
                               </select>
                            
                            <br>
-                        <p>Description</p><textarea type="text" id="a4_description" name="title" cols="30" rows="5"></textarea>
-                        <p>Weight</p><input type="text" id="a4_weight" name="title" onblur="calculate()" /><br/>
+                           <hr>
+                        <p class="margin-bottom4">Description</p><textarea type="text" id="a4_description" name="title" cols="30" rows="5"></textarea>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">Weight</p><input type="text" id="a4_weight" name="title" onblur="calculate()" /><br/>
 
                         <form>
 
                           <input type="button" value="Insert some text" onclick="insertText('txt1', 'Hello');">
-                        </form>
-                        
-                        <p>Was</p><input type="text" id="title5" name="title"/ value="€"><br/>
+                        </form></div>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">Was </p><input type="text" id="title5" name="title"/ value="€"><br/>
                         <form>
                         <input id="radio" selected="each" type="radio" name="pick" value="each">Each
                         <input id="radio1" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
-                        </form>
-                        <p>Save</p><input type="text" id="title6" name="title"/ value="€"><br/>
+                        </form></div>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">Save</p><input type="text" id="title6" name="title"/ value="€"><br/>
                         <form>
                         <input id="radio2" selected="each" type="radio" name="pick" value="each">Each
                         <input id="radio3" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
-                        </form>
-                        <p>New Price</p><input type="text" id="title7" name="title" value="€"/><br/>
+                        </form></div>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">New Price</p><input type="text" id="title7" name="title" value="€"/><br/>
                         <form>
                         <input id="radio4" selected="each" type="radio" name="pick" value="each">Each
                         <input id="radio5" selected="/kg" type="radio" name="pick" value="/kg">Per Kg
-                      </form>
-                        <p>Valid from</p><input type="date" id="myDate" name="title"/><br/>
-                        <button onclick="myFunction()">Try it</button>
-                        
-                        <p>Valid to</p><input type="date" id="myDate2" name="title"/><br/>
-                        <button onclick="myFunction2()">Try it</button>
-                        <p>Country of Origin</p><select id="countries_options">
+                      </form></div>
+                      <hr>
+                      <div class="inline">
+                        <p class="margin-bottom4">Valid from</p><input type="date" id="myDate" name="title"/><br/>
+                        <button onclick="myFunction()">Try it</button></div>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">Valid to</p><input type="date" id="myDate2" name="title"/><br/>
+                        <button onclick="myFunction2()">Try it</button></div>
+                        <hr>
+                        <div class="inline">
+                        <p class="margin-bottom4">Country of Origin</p><select id="countries_options">
                             <option value="Ireland" selected="Ireland">Ireland</option>
                             <option>Scotland</option>
                             <option>United Kingdom</option>
                             <option>Danmark</option>
                             <option>Germany</option>
-                          </select><br/>
+                          </select><br/></div>
                         </form>
                   
           </div>
